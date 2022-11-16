@@ -39,16 +39,34 @@ class Column {
 }
 
 
+function reset(){
+  w = windowWidth/number
+  for(let i = 0; i < width/w; i++){
+    c[i] = new Column(i*w, w);
+  }
+}
+
+
 c = [];
 w = 20;
+let number;
+let slider;
 function setup() {
-  createCanvas(windowWidth, windowHeight + 200);
+  createCanvas(windowWidth, windowHeight);
+  slider = createSlider(0, 80, 80);
+  slider.position(10, 10);
+  number = slider.value()
+  w = windowWidth/number
   for(let i = 0; i < width/w; i++){
     c[i] = new Column(i*w, w);
   }
 }
 
 function draw() {
+  if(slider.value() != number){
+    number = slider.value();
+    reset();
+  }
   background(0);
   frameRate(15);
   for(let i = 0; i < width/w; i++){
