@@ -42,7 +42,7 @@ class Column {
 c = [];
 w = 20;
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight + 200);
   for(let i = 0; i < width/w; i++){
     c[i] = new Column(i*w, w);
   }
