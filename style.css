@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   justify-content: center;
   align-items: center;
-  font-size: larger;
+  font-size: 120%;
 }
 canvas {
   display: block;
@@ -17,8 +17,9 @@ canvas {
   margin-top: 100px;
   border-radius: 10px;
   text-align: center;
-  height: 700px;
+  height: 60vh;
   padding: 5px;
+  min-width: 60%;
 }
 
 
@@ -40,10 +41,11 @@ canvas {
   margin-top: 20px;
   text-align: left;
   padding: 10px;
+  height: 90vh;
+  max-height: 30%;
 }
 
 hr {
   width: 90%;
 }
-
 
